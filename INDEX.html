@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Based Intrusion Detection System (SOC Dashboard)</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+:root{
+    --bg:#050b1d;
+    --panel:#0b1633;
+    --border:#1f3b77;
+    --cyan:#4cc9ff;
+    --blue:#1f6bff;
+    --text:#e6f1ff;
+    --muted:#9fb4d9;
+    --danger:#ff4d4d;
+    --success:#00ff9c;
+    --warning:#ffcc00;
+    --info:#00c6ff;
+}
+
+*{
+    box-sizing:border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    background:radial-gradient(circle at top,#08153a,#020617);
+    color:var(--text);
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+header{
+    padding:18px;
+    text-align:center;
+    font-size:26px;
+    font-weight:700;
+    background:linear-gradient(90deg,#1f6bff,#00c6ff);
+    color:white;
+    box-shadow:0 4px 20px rgba(0,0,0,.4);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+/* ===== GRID ===== */
+.container{
+    padding:24px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    max-width:1600px;
+    margin:0 auto;
+}
+
+/* ===== CARDS ===== */
+.card{
+    background:linear-gradient(180deg,#0b1633,#050b1d);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 0 30px rgba(31,107,255,.08);
+    transition:transform .25s ease, box-shadow .25s ease;
+    min-height:150px;
+    display:flex;
+    flex-direction:column;
+}
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 40px rgba(31,107,255,.15);
+}
+
+.card h3{
+    margin:0 0 12px 0;
+    font-size:15px;
+    color:var(--cyan);
+    letter-spacing:.4px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:8px;
+}
+
+.big{
+    font-size:34px;
+    font-weight:700;
+    margin:auto 0;
+}
+
+.medium {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.small {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* ===== STATUS COLORS ===== */
+.ok{ color:var(--success); }
+.bad{ color:var(--danger); }
+.warning{ color:var(--warning); }
+.info{ color:var(--info); }
+
+/* ===== METRIC BADGES ===== */
+.metric-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background: rgba(31, 107, 255, 0.1);
+    border: 1px solid rgba(31, 107, 255, 0.3);
+}
+
+.metric-high { background: rgba(0, 255, 156, 0.1); color: var(--success); border-color: rgba(0, 255, 156, 0.3); }
+.metric-medium { background: rgba(255, 204, 0, 0.1); color: var(--warning); border-color: rgba(255, 204, 0, 0.3); }
+.metric-low { background: rgba(255, 77, 77, 0.1); color: var(--danger); border-color: rgba(255, 77, 77, 0.3); }
+
+/* ===== LAYOUT ADJUSTMENTS ===== */
+.span-2{ grid-column:span 2; }
+.span-3{ grid-column:span 3; }
+.span-4{ grid-column:span 4; }
+
+/* ===== SPECIALIZED CARD LAYOUTS ===== */
+.forecast-card {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cluster-card {
+    min-height: 320px;
+}
+
+.cluster-chart-container {
+    height: 260px;
+    margin-top: 10px;
+}
+
+/* ===== CHART ===== */
+.chart-container {
+    position:relative;
+    height:220px;
+    width:100%;
+}
+
+/* ===== LOG BOX ===== */
+.log{
+    height:160px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    font-size:13px;
+    color:var(--muted);
+    font-family: 'Courier New', monospace;
+    background:rgba(2,6,23,0.5);
+    border-radius:8px;
+    padding:10px;
+    border:1px solid rgba(31,59,119,0.3);
+}
+
+.log-entry {
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(159,180,217,0.1);
+}
+
+/* ===== CHATBOT ===== */
+.chatbox{
+    display:flex;
+    flex-direction:column;
+    height:400px;
+}
+
+.chat-messages{
+    flex:1;
+    overflow-y:auto;
+    padding:10px;
+    font-size:14px;
+    color:var(--text);
+    background:rgba(2,6,23,0.5);
+    border-radius:8px;
+    margin-bottom:10px;
+    border:1px solid rgba(31,59,119,0.3);
+}
+
+.bot{
+    background:#0f1f44;
+    padding:12px 16px;
+    border-radius:14px;
+    margin-bottom:10px;
+    max-width:85%;
+}
+
+.user{
+    background:#1f6bff;
+    padding:12px 16px;
+    border-radius:14px;
+    margin-bottom:10px;
+    max-width:85%;
+    align-self:flex-end;
+}
+
+/* ===== CHAT INPUT ===== */
+.chat-input{
+    display:flex;
+    gap:10px;
+    margin-top:auto;
+}
+
+textarea{
+    flex:1;
+    resize:none;
+    min-height:50px;
+    max-height:120px;
+    border-radius:14px;
+    border:1px solid var(--border);
+    background:#020617;
+    color:white;
+    padding:12px 16px;
+    font-size:14px;
+    outline:none;
+    transition:border-color 0.3s ease;
+}
+
+textarea:focus{
+    border-color:#4cc9ff;
+    box-shadow:0 0 0 2px rgba(76,201,255,0.2);
+}
+
+button{
+    background:linear-gradient(180deg,#1f6bff,#0a4dff);
+    border:none;
+    color:white;
+    padding:0 22px;
+    border-radius:14px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+    min-width:80px;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(31,107,255,0.3);
+}
+
+button:active{
+    transform:translateY(0);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:20px;
+    color:var(--muted);
+    font-size:13px;
+    border-top:1px solid rgba(31,59,119,0.3);
+    margin-top:20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .span-2, .span-3, .span-4 {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+        gap: 12px;
+    }
+    .span-2, .span-3, .span-4 {
+        grid-column: span 2;
+    }
+    .big {
+        font-size: 28px;
+    }
+    header {
+        font-size: 22px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .span-2, .span-3, .span-4 {
+        grid-column: span 1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>🚀 AI-Based Intrusion Detection System (SOC Dashboard)</header>
+
+<div class="container">
+
+    <!-- TOP STATS -->
+    <div class="card">
+        <h3>🖥️ System Status</h3>
+        <div id="status" class="big info">CONNECTING…</div>
+        <div id="modelAccuracy" class="small">Model Acc: Loading…</div>
+    </div>
+
+    <div class="card">
+        <h3>📦 Packets / Second</h3>
+        <div id="pps" class="big">0</div>
+        <div class="small">Real-time traffic</div>
+    </div>
+
+    <div class="card">
+        <h3>💾 Bytes / Second</h3>
+        <div id="bps" class="big">0</div>
+        <div class="small">Network throughput</div>
+    </div>
+
+    <div class="card">
+        <h3>🎯 Confidence</h3>
+        <div id="confidence" class="big">—</div>
+        <div class="small">AI detection certainty</div>
+    </div>
+
+    <div class="card">
+        <h3>⚠️ Attack Detected</h3>
+        <div id="attack" class="big ok">None</div>
+        <div id="currentPackets" class="small">Current: 0 packets</div>
+    </div>
+
+    <div class="card">
+        <h3>📊 Total Captured</h3>
+        <div id="captured" class="big">0</div>
+        <div class="small">All-time packet count</div>
+    </div>
+
+    <!-- MODEL METRICS -->
+    <div class="card span-2">
+        <h3>🤖 Model Performance</h3>
+        <div id="modelMetrics">
+            <div class="metric-badge metric-high">Accuracy: <span id="accuracy">—</span>%</div>
+            <div class="metric-badge metric-medium">Precision: <span id="precision">—</span>%</div>
+            <div class="metric-badge metric-medium">Recall: <span id="recall">—</span>%</div>
+            <div class="metric-badge metric-low">F1-Score: <span id="f1score">—</span>%</div>
+        </div>
+        <div class="small" style="margin-top: 15px;">
+            <div>🔐 Hash Algorithm: <strong>SHA-256</strong></div>
+            <div>🔒 Encryption: <strong>Fernet (AES-128)</strong></div>
+            <div>📈 Backend: <span id="backendStatus">Checking…</span></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>🚨 Severity</h3>
+        <div id="severity" class="big ok">NONE</div>
+        <div class="small">Threat level</div>
+    </div>
+
+    <div class="card">
+        <h3>🔒 Encrypted Logs</h3>
+        <div id="elog" class="log">No encrypted alerts yet…</div>
+        <div id="hashedAttacks" class="small" style="margin-top: 8px;"></div>
+    </div>
+
+    <!-- THIRD ROW -->
+    <div class="card span-2">
+        <h3>📝 Recent Attacks</h3>
+        <div id="log" class="log">System starting up…</div>
+        <div class="small" style="margin-top: 8px;">Last 10 detections</div>
+    </div>
+
+    <div class="card span-2">
+        <h3>📈 Live Traffic Monitor</h3>
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+        <div class="small" style="margin-top: 10px;">
+            Attack Statistics: <span id="attackStats">Loading…</span>
+        </div>
+    </div>
+
+    <!-- TIMELINE CHART -->
+    <div class="card span-2">
+        <h3>📅 Attack Timeline</h3>
+        <div class="chart-container">
+            <canvas id="timelineChart"></canvas>
+        </div>
+        <div class="small" style="margin-top: 10px;">Confidence over time</div>
+    </div>
+
+    <!-- HEATMAP CHART -->
+    <div class="card span-2">
+        <h3>🔥 Packet Heatmap</h3>
+        <div class="chart-container">
+            <canvas id="heatmapChart"></canvas>
+        </div>
+        <div class="small" style="margin-top: 10px;">Traffic density visualization</div>
+    </div>
+
+    <!-- EXPLAINABLE AI -->
+    <div class="card span-2">
+        <h3>🧠 Explainable AI</h3>
+        <div id="explainBox" class="log">Waiting for explanation...</div>
+    </div>
+
+    <!-- THREAT FORECAST -->
+    <div class="card forecast-card">
+        <h3>🔮 Threat Forecast</h3>
+        <div id="forecastPackets" class="big">—</div>
+        <div id="forecastLevel" class="big warning">—</div>
+        <div class="small" style="margin-top: 8px;">5 steps ahead prediction</div>
+    </div>
+
+    <!-- ATTACK CLUSTERS -->
+    <div class="card span-2 cluster-card">
+        <h3>🧩 Attack Clusters</h3>
+        <div class="cluster-chart-container">
+            <canvas id="clusterChart"></canvas>
+        </div>
+        <div class="small" style="margin-top: 10px;">Traffic pattern grouping</div>
+    </div>
+
+    <!-- CHATBOT -->
+    <div class="card span-4 chatbox">
+        <h3>🤖 AI Security Assistant</h3>
+
+        <div class="chat-messages" id="messages">
+            <div class="bot">👋 Hello! I'm your AI Security Assistant. I can explain IDS alerts, attack types, confidence levels, severity ratings, and model performance metrics. How can I help you today?</div>
+        </div>
+
+        <div class="chat-input">
+            <textarea id="input" placeholder="Ask me about cybersecurity, attack types, or system metrics… (Press Enter to send)"></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 AI Intrusion Detection System | 🔐 Cybersecurity · 🤖 AI · 🔒 Cryptography<br>
+    <small>Real-time monitoring | SHA-256 Hashing | AES-128 Encryption | Machine Learning Powered</small>
+</footer>
+
+<script>
+// GLOBAL ERROR HANDLER
+window.addEventListener('error', function(e) {
+    console.error('Error:', e.message);
+    e.preventDefault();
+});
+
+window.addEventListener('unhandledrejection', function(event) {
+    console.error('Unhandled rejection:', event.reason);
+    event.preventDefault();
+});
+
+// ==================== STATE MANAGEMENT ====================
+// Store previous state to avoid unnecessary updates
+const state = {
+    status: '',
+    pps: '',
+    bps: '',
+    attack: '',
+    confidence: '',
+    severity: '',
+    captured: '',
+    currentPackets: '',
+    modelAccuracy: '',
+    accuracy: '',
+    precision: '',
+    recall: '',
+    f1score: '',
+    backendStatus: '',
+    attackStats: '',
+    hashedAttacks: '',
+    logs: '',
+    encryptedLogs: ''
+};
+
+// Safe update function - only updates DOM if value changed
+function safeUpdate(id, value, className = null) {
+    if (state[id] === value) return; // Skip if no change
+    
+    state[id] = value;
+    const element = document.getElementById(id);
+    if (element) {
+        element.textContent = value;
+        if (className !== null) {
+            element.className = className;
+        }
+    }
+}
+
+// ==================== CHART INITIALIZATION ====================
+let chart = null;
+let chartData = Array(20).fill(0);
+
+try {
+    const ctx = document.getElementById('chart').getContext('2d');
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: Array.from({length: 20}, (_, i) => i + 1),
+            datasets: [{
+                label: 'Packets/sec',
+                data: chartData,
+                borderColor: '#4cc9ff',
+                backgroundColor: 'rgba(76, 201, 255, 0.1)',
+                borderWidth: 2,
+                tension: 0.4,
+                fill: true,
+                pointBackgroundColor: '#4cc9ff',
+                pointBorderColor: '#ffffff',
+                pointBorderWidth: 2,
+                pointRadius: 3,
+                pointHoverRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: false, // DISABLE ANIMATIONS to prevent flickering
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    backgroundColor: 'rgba(11, 22, 51, 0.9)',
+                    titleColor: '#4cc9ff',
+                    bodyColor: '#e6f1ff',
+                    borderColor: '#1f3b77',
+                    borderWidth: 1
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    grid: { color: 'rgba(31, 59, 119, 0.3)' },
+                    ticks: { color: '#9fb4d9', maxTicksLimit: 10 }
+                },
+                y: {
+                    display: true,
+                    grid: { color: 'rgba(31, 59, 119, 0.3)' },
+                    ticks: { color: '#9fb4d9' },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+} catch (error) {
+    console.error('Chart initialization failed:', error);
+}
+
+// Timeline Chart
+let timelineChart = null;
+try {
+    const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+    timelineChart = new Chart(timelineCtx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Attack Confidence %',
+                data: [],
+                borderColor: '#ff6b6b',
+                backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                borderWidth: 2,
+                tension: 0.4,
+                fill: true,
+                pointBackgroundColor: '#ff6b6b',
+                pointBorderColor: '#ffffff',
+                pointBorderWidth: 2,
+                pointRadius: 4,
+                pointHoverRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: false,
+            plugins: {
+                legend: { display: true, labels: { color: '#e6f1ff' } },
+                tooltip: {
+                    backgroundColor: 'rgba(11, 22, 51, 0.9)',
+                    titleColor: '#ff6b6b',
+                    bodyColor: '#e6f1ff',
+                    borderColor: '#ff6b6b',
+                    borderWidth: 1
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    grid: { color: 'rgba(31, 59, 119, 0.3)' },
+                    ticks: { color: '#9fb4d9', maxTicksLimit: 15 }
+                },
+                y: {
+                    display: true,
+                    grid: { color: 'rgba(31, 59, 119, 0.3)' },
+                    ticks: { color: '#9fb4d9' },
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+} catch (error) {
+    console.error('Timeline chart initialization failed:', error);
+}
+
+// Heatmap Chart
+let heatmapChart = null;
+try {
+    const heatmapCtx = document.getElementById('heatmapChart').getContext('2d');
+    heatmapChart = new Chart(heatmapCtx, {
+        type: 'bar',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Packets/sec',
+                data: [],
+                backgroundColor: 'rgba(255, 165, 0, 0.7)',
+                borderColor: '#ffa500',
+                borderWidth: 1,
+                borderRadius: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: false,
+            plugins: {
+                legend: { display: true, labels: { color: '#e6f1ff' } },
+                tooltip: {
+                    backgroundColor: 'rgba(11, 22, 51, 0.9)',
+                    titleColor: '#ffa500',
+                    bodyColor: '#e6f1ff',
+                    borderColor: '#ffa500',
+                    borderWidth: 1
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    grid: { color: 'rgba(31, 59, 119, 0.3)' },
+                    ticks: { color: '#9fb4d9', maxTicksLimit: 15 }
+                },
+                y: {
+                    display: true,
+                    grid: { color: 'rgba(31, 59, 119, 0.3)' },
+                    ticks: { color: '#9fb4d9' },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+} catch (error) {
+    console.error('Heatmap chart initialization failed:', error);
+}
+
+// Cluster Chart (Scatter for traffic clustering)
+let clusterChart = null;
+try {
+    const clusterCtx = document.getElementById('clusterChart').getContext('2d');
+    clusterChart = new Chart(clusterCtx, {
+        type: 'scatter',
+        data: {
+            datasets: [
+                {
+                    label: 'Cluster 0 (Low Traffic)',
+                    data: [],
+                    backgroundColor: 'rgba(76, 201, 255, 0.7)',
+                    borderColor: '#4cc9ff',
+                    borderWidth: 1,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: 'Cluster 1 (Medium Traffic)',
+                    data: [],
+                    backgroundColor: 'rgba(255, 200, 0, 0.7)',
+                    borderColor: '#ffc800',
+                    borderWidth: 1,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                },
+                {
+                    label: 'Cluster 2 (High Traffic)',
+                    data: [],
+                    backgroundColor: 'rgba(255, 107, 107, 0.7)',
+                    borderColor: '#ff6b6b',
+                    borderWidth: 1,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: false,
+            plugins: {
+                legend: { display: true, labels: { color: '#e6f1ff' } },
+                tooltip: {
+                    backgroundColor: 'rgba(11, 22, 51, 0.9)',
+                    titleColor: '#4cc9ff',
+                    bodyColor: '#e6f1ff',
+                    borderColor: '#1f3b77',
+                    borderWidth: 1
+                }
+            },
+            scales: {
+                x: {
+                    display: true,
+                    title: { display: true, text: 'Time Index' },
+                    grid: { color: 'rgba(31, 59, 119, 0.3)' },
+                    ticks: { color: '#9fb4d9' }
+                },
+                y: {
+                    display: true,
+                    title: { display: true, text: 'Packets/sec' },
+                    grid: { color: 'rgba(31, 59, 119, 0.3)' },
+                    ticks: { color: '#9fb4d9' },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+} catch (error) {
+    console.error('Cluster chart initialization failed:', error);
+}
+
+// ==================== BACKEND CONNECTION ====================
+let backendAvailable = false;
+let connectionRetries = 0;
+const maxRetries = 3;
+const POLL_INTERVAL = 2000; // 2 seconds - reduced for better responsiveness
+const METRICS_INTERVAL = 30000; // 30 seconds
+let lastPollTime = 0;
+let isPolling = false; // Prevent overlapping polls
+let consecutiveErrors = 0;
+
+// Fetch with timeout
+function fetchWithTimeout(url, timeout = 3000) {
+    return Promise.race([
+        fetch(url),
+        new Promise((_, reject) =>
+            setTimeout(() => reject(new Error('Timeout')), timeout)
+        )
+    ]);
+}
+
+// ==================== DATA LOADING FUNCTIONS ====================
+
+async function loadModelMetrics() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/model-metrics", 3000);
+        if (response.ok) {
+            const metrics = await response.json();
+            
+            const accuracyStr = (metrics.accuracy * 100).toFixed(2);
+            const precisionStr = (metrics.precision * 100).toFixed(2);
+            const recallStr = (metrics.recall * 100).toFixed(2);
+            const f1Str = (metrics.f1_score * 100).toFixed(2);
+            
+            safeUpdate('accuracy', accuracyStr);
+            safeUpdate('precision', precisionStr);
+            safeUpdate('recall', recallStr);
+            safeUpdate('f1score', f1Str);
+            safeUpdate('modelAccuracy', `Model Acc: ${accuracyStr}%`);
+            
+            return true;
+        }
+    } catch (e) {
+        // Silent fail
+    }
+    return false;
+}
+
+async function loadAttackStats() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/attack-stats", 3000);
+        if (response.ok) {
+            const stats = await response.json();
+            let statsText = `Total Attacks: ${stats.total_attacks}`;
+            
+            if (stats.total_attacks > 0) {
+                statsText += ` | Avg Confidence: ${stats.avg_confidence}%`;
+                
+                const attackTypes = Object.entries(stats.attack_types)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 3);
+                
+                if (attackTypes.length > 0) {
+                    statsText += ` | Top: ${attackTypes.map(([type, count]) => `${type} (${count})`).join(', ')}`;
+                }
+            }
+            
+            safeUpdate('attackStats', statsText);
+        }
+    } catch (e) {
+        // Silent fail
+    }
+}
+
+async function loadTimeline() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/timeline", 3000);
+        if (response.ok && timelineChart) {
+            const data = await response.json();
+            
+            timelineChart.data.labels = data.map(d => d.time.split(" ")[1]);
+            timelineChart.data.datasets[0].data = data.map(d => d.confidence);
+            timelineChart.update('none');
+        }
+    } catch (e) {
+        // Silent fail
+    }
+}
+
+async function loadHeatmap() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/packet-heatmap", 3000);
+        if (response.ok && heatmapChart) {
+            const data = await response.json();
+            
+            heatmapChart.data.labels = data.map(d => d.time.split(" ")[1]);
+            heatmapChart.data.datasets[0].data = data.map(d => Math.floor(d.packets));
+            heatmapChart.update('none');
+        }
+    } catch (e) {
+        // Silent fail
+    }
+}
+
+async function loadForecast() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/forecast", 3000);
+        if (response.ok) {
+            const forecast = await response.json();
+            const threatColor = forecast.threat_level === 'HIGH' ? 'bad' : 
+                               forecast.threat_level === 'MEDIUM' ? 'warning' : 'ok';
+            
+            safeUpdate('forecastPackets', `Predicted: ${forecast.future_packets} pps`, 'big');
+            safeUpdate('forecastLevel', `Threat: ${forecast.threat_level}`, `big ${threatColor}`);
+        }
+    } catch (e) {
+        // Silent fail
+    }
+}
+
+async function loadClusters() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/clusters", 3000);
+        if (response.ok && clusterChart) {
+            const clustered = await response.json();
+            
+            if (clustered.length > 0) {
+                // Group by cluster
+                const clusters = [[], [], []];
+                clustered.forEach((entry, idx) => {
+                    if (clusters[entry.cluster]) {
+                        clusters[entry.cluster].push({
+                            x: idx,
+                            y: Math.floor(entry.packets)
+                        });
+                    }
+                });
+                
+                // Update all 3 datasets
+                for (let i = 0; i < 3; i++) {
+                    clusterChart.data.datasets[i].data = clusters[i];
+                }
+                clusterChart.update('none');
+            }
+        }
+    } catch (e) {
+        // Silent fail
+    }
+}
+
+async function loadHashedAttacks() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/hashed-attacks", 3000);
+        if (response.ok) {
+            const attacks = await response.json();
+            if (attacks.length > 0) {
+                const latest = attacks[attacks.length - 1];
+                const time = latest.time.split(' ')[1].substring(0, 5);
+                safeUpdate('hashedAttacks', `Latest: ${time}: ${latest.attack} (${latest.confidence}%)`);
+            } else {
+                safeUpdate('hashedAttacks', 'No attacks yet');
+            }
+        }
+    } catch (e) {
+        // Silent fail
+    }
+}
+
+async function loadLogs() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/logs", 3000);
+        if (response.ok) {
+            const logs = await response.json();
+            
+            let logHTML = '';
+            if (logs.length > 0) {
+                logs.slice(-10).reverse().forEach(log => {
+                    const time = log.time.split(' ')[1].substring(0, 8);
+                    const attackClass = log.attack === 'None' ? 'ok' : 'bad';
+                    logHTML += `<div class="log-entry"><span class="${attackClass}">${time}</span> ${log.attack} (${log.confidence}%) - ${log.severity}</div>`;
+                });
+            } else {
+                logHTML = '<div class="log-entry info">No attacks detected yet. System monitoring...</div>';
+            }
+            
+            // Only update if content changed
+            if (state.logs !== logHTML) {
+                state.logs = logHTML;
+                document.getElementById("log").innerHTML = logHTML;
+            }
+        }
+    } catch (e) {
+        // Silent fail
+    }
+}
+
+async function loadEncryptedLogs() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/encrypted-logs", 3000);
+        if (response.ok) {
+            const data = await response.json();
+            
+            let logHTML = '';
+            if (data.count > 0) {
+                data.entries.slice(-5).reverse().forEach(entry => {
+                    const time = entry.time.split(' ')[1].substring(0, 8);
+                    logHTML += `<div class="log-entry">🔒 ${time} - Encrypted attack data stored</div>`;
+                });
+            } else {
+                logHTML = '<div class="log-entry info">No encrypted alerts yet. System monitoring...</div>';
+            }
+            
+            // Only update if content changed
+            if (state.encryptedLogs !== logHTML) {
+                state.encryptedLogs = logHTML;
+                document.getElementById("elog").innerHTML = logHTML;
+            }
+        }
+    } catch (e) {
+        // Silent fail
+    }
+}
+
+// ==================== BACKEND POLLING ====================
+
+async function checkBackendHealth() {
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/health", 2000);
+        if (response.ok) {
+            backendAvailable = true;
+            safeUpdate('backendStatus', 'Connected ✓', 'ok');
+            consecutiveErrors = 0;
+            return true;
+        }
+    } catch (e) {
+        backendAvailable = false;
+        consecutiveErrors++;
+        if (consecutiveErrors > 2) {
+            safeUpdate('backendStatus', 'Disconnected ✗', 'bad');
+        }
+    }
+    return false;
+}
+
+async function pollBackend() {
+    // Prevent overlapping polls
+    if (isPolling) return;
+    
+    const now = Date.now();
+    if (now - lastPollTime < POLL_INTERVAL) return;
+    
+    isPolling = true;
+    lastPollTime = now;
+    
+    try {
+        const isHealthy = await checkBackendHealth();
+        
+        if (!isHealthy) {
+            // Only update UI if not already showing connection state
+            if (state.status !== 'CONNECTING...') {
+                safeUpdate('status', 'CONNECTING...', 'big warning');
+            }
+            isPolling = false;
+            return;
+        }
+        
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/status", 3000);
+        if (response.ok) {
+            const data = await response.json();
+            updateUIWithBackendData(data);
+            consecutiveErrors = 0;
+        } else {
+            throw new Error('Backend error');
+        }
+    } catch (e) {
+        console.error('Poll error:', e);
+        consecutiveErrors++;
+
+        safeUpdate('status', 'OFFLINE', 'big bad');
+    } finally {
+        isPolling = false;
+    }
+}
+
+function updateUIWithBackendData(data) {
+    safeUpdate('status', 'ACTIVE ✓', 'big ok');
+    safeUpdate('pps', Math.floor(data.packets_per_sec).toString());
+    safeUpdate('bps', formatBytes(data.bytes_per_sec));
+    safeUpdate('attack', data.attack, data.attack === "None" ? "big ok" : "big bad");
+    safeUpdate('confidence', data.confidence.toFixed(1) + "%");
+
+    const severityClass = "big " + (
+        data.severity === "HIGH" ? "bad" : 
+        data.severity === "MEDIUM" ? "warning" : 
+        data.severity === "LOW" ? "info" : "ok"
+    );
+
+    safeUpdate('severity', data.severity, severityClass);
+
+    safeUpdate('captured', data.total_captured.toString());
+
+    safeUpdate('currentPackets', `Current: ${data.current_packets} packets`);
+    
+    // Update explanation
+    if (data.explain) {
+        safeUpdate('explainBox', data.explain, 'log');
+    }
+
+    updateChart(data.packets_per_sec);
+}
+
+function updateChart(value) {
+    if (!chart) return;
+    
+    chartData.push(value);
+    if (chartData.length > 20) {
+        chartData.shift();
+    }
+    
+    chart.data.datasets[0].data = chartData;
+    chart.update('none'); // Use 'none' mode to prevent animations
+}
+
+function formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
+
+// ==================== CHAT FUNCTIONALITY ====================
+
+async function sendMessage() {
+    const input = document.getElementById("input");
+    const message = input.value.trim();
+    
+    if (!message) return;
+    
+    const userMsg = document.createElement("div");
+    userMsg.className = "user";
+    userMsg.textContent = message;
+    document.getElementById("messages").appendChild(userMsg);
+    
+    input.value = "";
+    input.style.height = "auto";
+    
+    const messagesContainer = document.getElementById("messages");
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    
+    try {
+        const response = await fetchWithTimeout("http://127.0.0.1:5000/chat", 5000);
+        
+        if (response.ok) {
+            const data = await response.json();
+            
+            const botMsg = document.createElement("div");
+            botMsg.className = "bot";
+            botMsg.textContent = data.reply;
+            document.getElementById("messages").appendChild(botMsg);
+        } else {
+            throw new Error('Backend error');
+        }
+    } catch (e) {
+        demoChatResponse(message);
+    }
+    
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+function demoChatResponse(message) {
+    const msg = message.toLowerCase();
+    let response = "I can explain: DDoS, port scans, brute force, malware, ransomware, phishing, data exfiltration, severity levels, confidence scores, and model metrics.";
+    
+    if (msg.includes("ddos")) {
+        response = "DDoS (Distributed Denial of Service) floods networks with traffic to overwhelm servers. High packet rates indicate this attack. We use SHA-256 hashing and AES-128 encryption to secure attack logs.";
+    } else if (msg.includes("severity")) {
+        response = "Severity levels: HIGH (>1000 packets/sec), MEDIUM (100-1000), LOW (<100). Based on traffic volume and encrypted logs.";
+    } else if (msg.includes("confidence")) {
+        response = "Confidence shows AI certainty (0-100%). Higher values mean more reliable detections. All attacks are hashed with SHA-256 for security.";
+    } else if (msg.includes("port")) {
+        response = "Port scanning probes multiple ports to find vulnerabilities. Shows sequential connection attempts. Logs are encrypted with Fernet (AES-128).";
+    } else if (msg.includes("brute")) {
+        response = "Brute force attacks try many passwords. Shows repeated authentication failures. Attack data is hashed and encrypted.";
+    } else if (msg.includes("malware")) {
+        response = "Malware shows unusual outbound connections, often with command-and-control patterns. Our model detects this with high accuracy.";
+    } else if (msg.includes("accuracy") || msg.includes("precision") || msg.includes("recall") || msg.includes("f1")) {
+        response = "Model Performance Metrics: Accuracy (overall correctness), Precision (correct attack identifications), Recall (attack detection rate), F1-Score (balance of precision/recall). Check the metrics panel for current values.";
+    } else if (msg.includes("hash") || msg.includes("encrypt")) {
+        response = "Security Features: All attacks are hashed using SHA-256 cryptographic algorithm and encrypted using Fernet (AES-128) for secure storage and transmission. This ensures data integrity and confidentiality.";
+    }
+    
+    const botMsg = document.createElement("div");
+    botMsg.className = "bot";
+    botMsg.textContent = response;
+    document.getElementById("messages").appendChild(botMsg);
+    
+    const messagesContainer = document.getElementById("messages");
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+// ==================== TEXTAREA AUTO-RESIZE ====================
+
+const textarea = document.getElementById("input");
+textarea.addEventListener("input", function() {
+    this.style.height = "auto";
+    this.style.height = (this.scrollHeight) + "px";
+});
+
+textarea.addEventListener("keydown", function(e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+    }
+});
+
+// ==================== INITIALIZATION ====================
+
+let pollInterval = null;
+let metricsInterval = null;
+let logsInterval = null;
+let isInitialized = false;
+
+function cleanupIntervals() {
+    try {
+        if (pollInterval) { clearInterval(pollInterval); pollInterval = null; }
+        if (metricsInterval) { clearInterval(metricsInterval); metricsInterval = null; }
+        if (logsInterval) { clearInterval(logsInterval); logsInterval = null; }
+    } catch (e) {
+        console.error('Error cleaning intervals:', e);
+    }
+}
+
+function initializeDashboard() {
+    if (isInitialized) {
+        console.log('Dashboard already initialized; skipping re-init');
+        return;
+    }
+    isInitialized = true;
+
+    console.log('🔧 Initializing Dashboard...');
+    cleanupIntervals();
+
+    // Load initial data (with safe catches)
+    loadModelMetrics().catch(e => console.error('Initial metrics load failed:', e));
+    pollBackend().catch(e => console.error('Initial poll failed:', e));
+    loadLogs().catch(e => console.error('Initial logs load failed:', e));
+    loadEncryptedLogs().catch(e => console.error('Initial encrypted logs load failed:', e));
+    loadHashedAttacks().catch(e => console.error('Initial hashed attacks load failed:', e));
+    loadAttackStats().catch(e => console.error('Initial attack stats load failed:', e));
+    loadTimeline().catch(e => console.error('Initial timeline load failed:', e));
+    loadHeatmap().catch(e => console.error('Initial heatmap load failed:', e));
+    loadForecast().catch(e => console.error('Initial forecast load failed:', e));
+    loadClusters().catch(e => console.error('Initial clusters load failed:', e));
+
+    // Set up intervals with proper timing
+    pollInterval = setInterval(() => {
+        pollBackend().catch(e => console.error('Recurring poll error:', e));
+    }, POLL_INTERVAL);
+
+    metricsInterval = setInterval(() => {
+        loadModelMetrics().catch(e => console.error('Recurring metrics error:', e));
+    }, METRICS_INTERVAL);
+
+    // Load logs and visualizations every 5 seconds
+    logsInterval = setInterval(() => {
+        Promise.all([
+            loadLogs(),
+            loadEncryptedLogs(),
+            loadHashedAttacks(),
+            loadAttackStats(),
+            loadTimeline(),
+            loadHeatmap(),
+            loadForecast(),
+            loadClusters()
+        ]).catch(e => console.error('Recurring logs error:', e));
+    }, 5000);
+
+    console.log('✅ Dashboard initialized with poll interval:', POLL_INTERVAL, 'ms');
+}
+
+// Initialize when DOM is ready (single listener)
+document.addEventListener('DOMContentLoaded', initializeDashboard);
+
+// Cleanup on page unload
+window.addEventListener('beforeunload', cleanupIntervals);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1226 @@
+[
+    {
+        "time": "2026-01-30 15:29:53",
+        "attack": "ddos",
+        "confidence": 85,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "0a49c6c12386a494ab0214843467d3ba1bb33d59683f20daca46c15c7dd47069"
+    },
+    {
+        "time": "2026-01-30 15:29:57",
+        "attack": "ddos",
+        "confidence": 85.9,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "3823d3ed04dc659121bf82d0234f227e340a08d38c6d6db44e8ebc0904c53bac"
+    },
+    {
+        "time": "2026-01-30 15:29:59",
+        "attack": "ddos",
+        "confidence": 86.1,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "9f85f985df8a09752299bc20c778a37be2d4c8ff0f5e738d60a5dcacc716dc68"
+    },
+    {
+        "time": "2026-01-30 15:30:03",
+        "attack": "ddos",
+        "confidence": 92.4,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "e5890f086b953dea042d318c5c39415b1346a0e45799a2419f8d4e38b67078c3"
+    },
+    {
+        "time": "2026-01-30 15:30:07",
+        "attack": "ddos",
+        "confidence": 85,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "2719cc5c7010b1375a6935ca7405bd8e801b38320d5d061e5051c19edd6a2796"
+    },
+    {
+        "time": "2026-01-30 15:30:11",
+        "attack": "ddos_udp",
+        "confidence": 86,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "b1ce020eb2335a705cfc39fef734509f776f507ece4030312c51f056428b65b6"
+    },
+    {
+        "time": "2026-01-30 15:30:13",
+        "attack": "ddos_udp",
+        "confidence": 86,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "df8f8639d7fa8e30426d5498745c636dff37c0ad776f5d1ba84652229c95a725"
+    },
+    {
+        "time": "2026-01-30 15:30:17",
+        "attack": "ddos_udp",
+        "confidence": 86,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "db65a36a49b6a64d2bcbf70f3903720c35bb794924e6d16348eb690595ebeea2"
+    },
+    {
+        "time": "2026-01-30 15:30:21",
+        "attack": "ddos_udp",
+        "confidence": 91.5,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "5f3b831a4ffddda5e8512a801a64d7bb147d535b9e34b7cdbbff300395d7b4f6"
+    },
+    {
+        "time": "2026-01-30 15:30:23",
+        "attack": "ddos_udp",
+        "confidence": 89.3,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "a00c06d3955eabc109581ab572cc8cf6079af9a94b3e47ce6107683495135c6f"
+    },
+    {
+        "time": "2026-01-30 15:30:27",
+        "attack": "ddos_tcp_syn",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "de04be448b4ff66c7106fbb8faeaa4d475942f9c9cfc19bb5013138295914777"
+    },
+    {
+        "time": "2026-01-30 15:30:29",
+        "attack": "ddos_tcp_syn",
+        "confidence": 74.7,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "481d5b6df30d34d206d187e9c7cd28109180373e7011d3938b9832bdee08402d"
+    },
+    {
+        "time": "2026-01-30 15:30:33",
+        "attack": "ddos_tcp_syn",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "200ca526e5a494f5616a87b6d2393e45953e765dcfef7a65e4fd4ba744a32033"
+    },
+    {
+        "time": "2026-01-30 15:30:37",
+        "attack": "ddos_tcp_syn",
+        "confidence": 73.9,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "1f076559273385bba146e26fb840f65ad7b418a0df7d341d917cd8d3fcdc8720"
+    },
+    {
+        "time": "2026-01-30 15:30:39",
+        "attack": "ddos_tcp_syn",
+        "confidence": 74.7,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "7c5fea73b1c1efed1e4f32f827c49847e2614a8fe39c2eca4e4aa6d4f7899840"
+    },
+    {
+        "time": "2026-01-30 15:30:43",
+        "attack": "port_scan",
+        "confidence": 75,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "9d319c07b43db064e25a9baf38e303c5ae073012a140f7e4b01148b909dd416a"
+    },
+    {
+        "time": "2026-01-30 15:30:45",
+        "attack": "port_scan",
+        "confidence": 78.4,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "6f007ea1cd388218ccc88294043ce3d3bc49c21951b15dd4839cd176955a6a55"
+    },
+    {
+        "time": "2026-01-30 15:30:49",
+        "attack": "port_scan",
+        "confidence": 81.6,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "01359351308551960be1f4dda400e863ebb5d9e764aa80058e575ff858da55cb"
+    },
+    {
+        "time": "2026-01-30 15:30:51",
+        "attack": "port_scan",
+        "confidence": 75,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "e8fe337eff849d57880fcf3af9ed4fb25ebced660e147e7008c6313e39684fb8"
+    },
+    {
+        "time": "2026-01-30 15:30:53",
+        "attack": "port_scan",
+        "confidence": 83.9,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "13f2586e2bf89abd505bda6d282b559465c64366f26957da6864a5782b37e8d5"
+    },
+    {
+        "time": "2026-01-30 15:30:57",
+        "attack": "port_scan_slow",
+        "confidence": 74.3,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "baca0ca5b95e80993c5a170e9c6a69f2a752130a680da789a966ecd05ce750b1"
+    },
+    {
+        "time": "2026-01-30 15:30:59",
+        "attack": "port_scan_slow",
+        "confidence": 76.7,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "fad3a3526215bc10e9e7046895e5d12cfae7aa182da0deeaf2f967c0183884c3"
+    },
+    {
+        "time": "2026-01-30 15:31:01",
+        "attack": "port_scan_slow",
+        "confidence": 71.9,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "277fa261570d3addac7f9a2df218c77d9f8f466ab041a43cd28b164b67ce442c"
+    },
+    {
+        "time": "2026-01-30 15:31:03",
+        "attack": "port_scan_slow",
+        "confidence": 70.7,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "9eafa94f76ea5da84b0d46ce97b0a61c18c5c69bf3b8e1ee934e8832b148d9d9"
+    },
+    {
+        "time": "2026-01-30 15:31:07",
+        "attack": "port_scan_slow",
+        "confidence": 75.0,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "e5bc42917c53e5b44e935a507b4df42f0190b24ae29a0008792499964aa0ecaf"
+    },
+    {
+        "time": "2026-01-30 15:31:11",
+        "attack": "brute_force",
+        "confidence": 80.5,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "01ea6b688c2c3b1dab7f0d11233aa64fc2e7bd752445d92469cfa3b254ec5049"
+    },
+    {
+        "time": "2026-01-30 15:31:15",
+        "attack": "brute_force",
+        "confidence": 80,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "5b11178d1851aeb0c94fb9073d0346e91d8ef290d2efab821f2c469524ae76a9"
+    },
+    {
+        "time": "2026-01-30 15:31:17",
+        "attack": "brute_force",
+        "confidence": 81.5,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "eee3cb9ece82ca00e57af0e01cb6f68fb00050b8fc7bf9092f14b0f29fcb7d58"
+    },
+    {
+        "time": "2026-01-30 15:31:21",
+        "attack": "brute_force",
+        "confidence": 84.7,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "c3166195377ef9ecd3a96b104451ef209e7406a2e7c8b7dd486eb543ce670286"
+    },
+    {
+        "time": "2026-01-30 15:31:23",
+        "attack": "brute_force",
+        "confidence": 83.2,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "63484810a9b1682d5be9cf70bedfbebdf13405f2c396179f1d9902769d816b06"
+    },
+    {
+        "time": "2026-01-30 15:31:27",
+        "attack": "brute_force_ssh",
+        "confidence": 82,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "48ac5812fc3a6857f12d03a2b4b5dab08b4157b09764ea503e9663e78c023600"
+    },
+    {
+        "time": "2026-01-30 15:31:29",
+        "attack": "brute_force_ssh",
+        "confidence": 84.5,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "1eed3db8f6bcca3c531253bf3fe13cd65e6a0dc599cfe332b386296bd37b02d5"
+    },
+    {
+        "time": "2026-01-30 15:31:31",
+        "attack": "brute_force_ssh",
+        "confidence": 85.8,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "62a4eb9d6ea3d9103b2f8af404b5a83358b64926ebce27d106224144c1b3fadf"
+    },
+    {
+        "time": "2026-01-30 15:31:35",
+        "attack": "brute_force_ssh",
+        "confidence": 86.8,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "f3715592080944c65ff0a45e09da3a9d874bbd58a9bf1cf36ad2e50fd1686dec"
+    },
+    {
+        "time": "2026-01-30 15:31:37",
+        "attack": "brute_force_ssh",
+        "confidence": 84.4,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "620ab613efc84210c02ea0c2733e99aa7530a7353c3db80e93979ad10c1f8deb"
+    },
+    {
+        "time": "2026-01-30 15:31:41",
+        "attack": "botnet",
+        "confidence": 85.7,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "f2cacd19a63e7dc17143bb579be545d0565390a5ee8321a331b18f60f73b13f8"
+    },
+    {
+        "time": "2026-01-30 15:31:43",
+        "attack": "botnet",
+        "confidence": 82.8,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "a33793a6698b4b817512251500d74aec1a2d7f8f953bbaa4ad56a80be462067b"
+    },
+    {
+        "time": "2026-01-30 15:31:45",
+        "attack": "botnet",
+        "confidence": 81.9,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "fec434a50d640eee16f2fd3c414819c5269506a56dc179445a8ced9f52e692a9"
+    },
+    {
+        "time": "2026-01-30 15:31:49",
+        "attack": "botnet",
+        "confidence": 84.3,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "8d6d3802bd267620cc66da168ea349145c4201d5ce71d6bb906ed7983187b3d4"
+    },
+    {
+        "time": "2026-01-30 15:31:51",
+        "attack": "botnet",
+        "confidence": 82.2,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "06d80d7de0d2ed7415764ac76b5d90cfdb20d2e2faeb2dc71196ec8d71882462"
+    },
+    {
+        "time": "2026-01-30 15:31:55",
+        "attack": "sql_injection",
+        "confidence": 78.7,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "56163c33aaa68da8128ea5651576a2fc107c66b3a7edcde74964bffe00a99eb7"
+    },
+    {
+        "time": "2026-01-30 15:31:57",
+        "attack": "sql_injection",
+        "confidence": 78,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "4f194d5f59ca84aff7fc889b94e9e6896b920a8d76d897688d5e4042f462694f"
+    },
+    {
+        "time": "2026-01-30 15:32:01",
+        "attack": "sql_injection",
+        "confidence": 83.7,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "89e8e117c50a1b19d4b07894e6237349b86ca67f73b8c864f3f1dd3fb992955e"
+    },
+    {
+        "time": "2026-01-30 15:32:05",
+        "attack": "sql_injection",
+        "confidence": 78,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "a0278dae0135e229aa5431ff2f913f7eca86bd3a5924185da62c329e90a7f3c0"
+    },
+    {
+        "time": "2026-01-30 15:32:09",
+        "attack": "sql_injection",
+        "confidence": 78,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "b2f3044d19e1c336b92e479409ec1d69b249ef37800c3a4a67baf0387928d836"
+    },
+    {
+        "time": "2026-01-30 15:32:11",
+        "attack": "xss",
+        "confidence": 78.1,
+        "severity": "MEDIUM",
+        "explanation": "Cross-site scripting patterns detected in request payloads.",
+        "hash": "740730821d7ea61c2b878e4b8055b8f40088cc4fd34f93c024abbac6afe2efbd"
+    },
+    {
+        "time": "2026-01-30 15:32:15",
+        "attack": "xss",
+        "confidence": 72,
+        "severity": "MEDIUM",
+        "explanation": "Cross-site scripting patterns detected in request payloads.",
+        "hash": "2cff5133c6bfca667f177fc466ad38b8558292e43c4eaf6823131bafa1962c4c"
+    },
+    {
+        "time": "2026-01-30 15:32:17",
+        "attack": "xss",
+        "confidence": 79.6,
+        "severity": "MEDIUM",
+        "explanation": "Cross-site scripting patterns detected in request payloads.",
+        "hash": "83ab8a3d46084a3dbda9325ac5867dd8e388f0e5d8318a59f3964c510077ef92"
+    },
+    {
+        "time": "2026-01-30 15:32:21",
+        "attack": "xss",
+        "confidence": 72,
+        "severity": "MEDIUM",
+        "explanation": "Cross-site scripting patterns detected in request payloads.",
+        "hash": "a23fd18cfb0ddc59194717911476c2112add7a32bdb5ea3798f3116edc8e19f0"
+    },
+    {
+        "time": "2026-01-30 15:32:25",
+        "attack": "xss",
+        "confidence": 72,
+        "severity": "MEDIUM",
+        "explanation": "Cross-site scripting patterns detected in request payloads.",
+        "hash": "10887e987489964a1aed69ec9345d7c8f747625a1b358ed2b1e47e1fba92b552"
+    },
+    {
+        "time": "2026-01-30 15:32:27",
+        "attack": "malware",
+        "confidence": 80.6,
+        "severity": "MEDIUM",
+        "explanation": "Unusual outbound traffic patterns detected, typical of malware communication.",
+        "hash": "1fb64b829876fea52995477a922f46424a95ee574c7d8453f40c4c3f64e5178e"
+    },
+    {
+        "time": "2026-01-30 15:32:29",
+        "attack": "malware",
+        "confidence": 83.3,
+        "severity": "MEDIUM",
+        "explanation": "Unusual outbound traffic patterns detected, typical of malware communication.",
+        "hash": "01e4d0cba4c6d82c688684246d7877db8331a95c66d00eee34e4e415e84c06d3"
+    },
+    {
+        "time": "2026-01-30 15:32:33",
+        "attack": "malware",
+        "confidence": 85.8,
+        "severity": "MEDIUM",
+        "explanation": "Unusual outbound traffic patterns detected, typical of malware communication.",
+        "hash": "96a7b4d3fb643d2cd4622150067b94c89329b9fb86f1b0c1755309f1d53693a6"
+    },
+    {
+        "time": "2026-01-30 15:32:35",
+        "attack": "malware",
+        "confidence": 85.4,
+        "severity": "MEDIUM",
+        "explanation": "Unusual outbound traffic patterns detected, typical of malware communication.",
+        "hash": "13c697870cb13fdafd0528ddf4b2f895848522446d0b7a72d6af2c048158fee0"
+    },
+    {
+        "time": "2026-01-30 15:32:39",
+        "attack": "malware",
+        "confidence": 79,
+        "severity": "MEDIUM",
+        "explanation": "Unusual outbound traffic patterns detected, typical of malware communication.",
+        "hash": "89f53a364633fccd8aab2dda78c09ab872940819ab40440f479c81232cb68ac9"
+    },
+    {
+        "time": "2026-01-30 15:32:43",
+        "attack": "ransomware",
+        "confidence": 80.3,
+        "severity": "MEDIUM",
+        "explanation": "Suspicious encryption and file access patterns detected.",
+        "hash": "42d2879a4a7564375e3398226d61ff182b7ede0fe46e35e2684975d0d4439a1b"
+    },
+    {
+        "time": "2026-01-30 15:32:47",
+        "attack": "ransomware",
+        "confidence": 77,
+        "severity": "MEDIUM",
+        "explanation": "Suspicious encryption and file access patterns detected.",
+        "hash": "d28ee3a538d245cdf65627e9b16866bac6027df0747175dc80b1021455d9023d"
+    },
+    {
+        "time": "2026-01-30 15:32:49",
+        "attack": "ransomware",
+        "confidence": 77,
+        "severity": "MEDIUM",
+        "explanation": "Suspicious encryption and file access patterns detected.",
+        "hash": "f130e06319fe0710e62e45322d1b0b749e63a14f274502464efd580b0f81627c"
+    },
+    {
+        "time": "2026-01-30 15:32:53",
+        "attack": "ransomware",
+        "confidence": 80.9,
+        "severity": "MEDIUM",
+        "explanation": "Suspicious encryption and file access patterns detected.",
+        "hash": "00be96be8b1de42c37f1b3662a5cd8b620f52579d2e7b34aa71ee07d351f48ea"
+    },
+    {
+        "time": "2026-01-30 15:32:55",
+        "attack": "ransomware",
+        "confidence": 77,
+        "severity": "MEDIUM",
+        "explanation": "Suspicious encryption and file access patterns detected.",
+        "hash": "97b1acf70dc07354b7219026a78ecba73d1d942a931187d24d65c2030cb66fff"
+    },
+    {
+        "time": "2026-01-30 15:32:59",
+        "attack": "phishing",
+        "confidence": 76.1,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "f4d8a6d8391667834046f845a65faf8fb00e1ea0cafd2c8d14eb83b8c1519453"
+    },
+    {
+        "time": "2026-01-30 15:33:01",
+        "attack": "phishing",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "cd955f9f8bf85a936676d3190d3b077e76338a1138af00193af4f69edd1a3acb"
+    },
+    {
+        "time": "2026-01-30 15:33:05",
+        "attack": "phishing",
+        "confidence": 70.9,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "52175b04a309a53fd3c5ab4ff2def6cbef1f593f6c0e4299586755bd372e5310"
+    },
+    {
+        "time": "2026-01-30 15:33:07",
+        "attack": "phishing",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "1b697a3784c9f7e360c04097d14ff2dd5278ee32b7fa578335f9267c6e1b21de"
+    },
+    {
+        "time": "2026-01-30 15:33:09",
+        "attack": "phishing",
+        "confidence": 76.1,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "a1afefd1945dfaefa692ac9116e50bac33319a1259fba6ed928459c0a90d8985"
+    },
+    {
+        "time": "2026-01-30 15:33:11",
+        "attack": "data_exfiltration",
+        "confidence": 76.5,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "570a7a93648a423929825bb2f99c2562bc773efd3ec18d12210ae99865d69982"
+    },
+    {
+        "time": "2026-01-30 15:33:15",
+        "attack": "data_exfiltration",
+        "confidence": 74.5,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "44c2eee41d518ccd6810778f9cc107ff3e0dcbabe212d048e84db3a5da3a19f3"
+    },
+    {
+        "time": "2026-01-30 15:33:19",
+        "attack": "data_exfiltration",
+        "confidence": 76.9,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "740669d9139f754332faf4ff9d9e0a26ce97085e2d73f2da30ad633c7cc5ce2e"
+    },
+    {
+        "time": "2026-01-30 15:33:22",
+        "attack": "data_exfiltration",
+        "confidence": 76.8,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "f23bf201626336d926d42912cec5c66e7c79ffc47a0682c3cdadb33b2dfaee2d"
+    },
+    {
+        "time": "2026-01-30 15:33:23",
+        "attack": "data_exfiltration",
+        "confidence": 74.4,
+        "severity": "MEDIUM",
+        "explanation": "Traffic anomaly detected based on unusual network behavior.",
+        "hash": "dddbb4c124927d08e968d82613aabac43e3088ecd3ae122bdcaa0446ca4f9175"
+    },
+    {
+        "time": "2026-02-03 17:00:06",
+        "attack": "ddos",
+        "confidence": 85,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "f33e186ead306e5aed62f228d2b8c56c191a60aa3b30a46295cd541b91ae323a"
+    },
+    {
+        "time": "2026-02-03 17:00:10",
+        "attack": "ddos",
+        "confidence": 89.2,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "317f676bf58a0bc2ee950cd7b5caccb9fd430c88dfb3b7cefca1c669460dbf24"
+    },
+    {
+        "time": "2026-02-03 17:00:14",
+        "attack": "ddos",
+        "confidence": 90.6,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "f286891842806b355778f9e87545ecf957d6121d848fc2a08151f7be0a91e09a"
+    },
+    {
+        "time": "2026-02-03 17:00:18",
+        "attack": "ddos",
+        "confidence": 87.3,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "294e100f14205a23ecefa5c959fe9d3ddb24d25339867c7a97a5bae1d6f74392"
+    },
+    {
+        "time": "2026-02-03 17:00:20",
+        "attack": "ddos",
+        "confidence": 92.9,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "6df957ee502486d50ff1138eefd656d7c3c6bf63c4cfb8aee31a6ca6aeefe6ff"
+    },
+    {
+        "time": "2026-02-03 17:00:24",
+        "attack": "ddos_udp",
+        "confidence": 87.9,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "fc4e4175c01ab5214ec551687302142775aa53ae3cfba6e78a20236f0a955a14"
+    },
+    {
+        "time": "2026-02-03 17:00:26",
+        "attack": "ddos_udp",
+        "confidence": 86,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "57b09108883e49bfd2f2b7598bd90ebe33673c703b3efce387dcedc8209ff31e"
+    },
+    {
+        "time": "2026-02-03 17:00:30",
+        "attack": "ddos_udp",
+        "confidence": 87.4,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "4d2977d64bd1ce56da4f755c38ad32ff712f40479629f53f152e0ddebdf7bdfd"
+    },
+    {
+        "time": "2026-02-03 17:00:34",
+        "attack": "ddos_udp",
+        "confidence": 88.1,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "ca6bc126db23f45e50a4dc357bd909d03093748060f70d20deea4fc811043dd3"
+    },
+    {
+        "time": "2026-02-03 17:00:38",
+        "attack": "ddos_udp",
+        "confidence": 87.0,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "681e794e8ce23c0f829649f042d72605d8705de599d2e377e4cad3377029ebce"
+    },
+    {
+        "time": "2026-02-03 17:00:42",
+        "attack": "ddos_tcp_syn",
+        "confidence": 73.4,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "afccca88581708f6cad22c0f69b9de7ed621166eb86e1a094e95b9b36c008d47"
+    },
+    {
+        "time": "2026-02-03 17:00:44",
+        "attack": "ddos_tcp_syn",
+        "confidence": 79.2,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "c86d002f1a4d7d62d2ef6b33abb8aa674d0ebfe31945d8826645314d6fee7a22"
+    },
+    {
+        "time": "2026-02-03 17:00:48",
+        "attack": "ddos_tcp_syn",
+        "confidence": 71.0,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "7515991b00bdcd9298ab34658d36e2f9528b99076bbc939b9d12ccb0767e2f41"
+    },
+    {
+        "time": "2026-02-03 17:00:50",
+        "attack": "ddos_tcp_syn",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "91c4a392171cbbb2c1af4c2cf1210b4a3426e81e1fa460fdd19cefd0b46df4a6"
+    },
+    {
+        "time": "2026-02-03 17:00:54",
+        "attack": "ddos_tcp_syn",
+        "confidence": 78.7,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "0c68765688f86990ca91eceb3c5defcdb6ac2bc29a6be9ecdc40b7c10ece7d41"
+    },
+    {
+        "time": "2026-02-03 17:00:58",
+        "attack": "port_scan",
+        "confidence": 75,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "ae96a0e105c74188a55f337ccc0921d1d1fddb9ef3247dd74e95102735258bb4"
+    },
+    {
+        "time": "2026-02-03 17:01:02",
+        "attack": "port_scan",
+        "confidence": 81.0,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "6d830898877bbddd06726fb5694ad263f71dc698197717efc7b05b9cc4e3688d"
+    },
+    {
+        "time": "2026-02-03 17:01:06",
+        "attack": "port_scan",
+        "confidence": 77.4,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "06ce74cdf03c3a8773d75a855dd0fed3e3851cd1b54a820468a32ec1f11c8de3"
+    },
+    {
+        "time": "2026-02-03 17:01:10",
+        "attack": "port_scan",
+        "confidence": 79.0,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "243841b27b314d5145cc9f142d77b56e4d66afb95671a5b99b5fd4646a3ee6fb"
+    },
+    {
+        "time": "2026-02-03 17:01:12",
+        "attack": "port_scan",
+        "confidence": 83.0,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "dd054cf0d0d53ec7f504b20e8d687150f353f8786fcb85b29b68b844aae1ce98"
+    },
+    {
+        "time": "2026-02-03 17:01:16",
+        "attack": "port_scan_slow",
+        "confidence": 74.9,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "fd825e107041b3dba728e97f5ebf5100d542c83e79f1e3436bee0138def6f1ad"
+    },
+    {
+        "time": "2026-02-03 17:01:18",
+        "attack": "port_scan_slow",
+        "confidence": 78.0,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "0ee611143df46ba7ce498505609d488dd44c5efc21a26d6fab519972cfaddb06"
+    },
+    {
+        "time": "2026-02-03 17:01:20",
+        "attack": "port_scan_slow",
+        "confidence": 72.9,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "d3d0931c59bf0147a543ea1543fd02ea5cae07d7fe72b41e28b2179c5bd72a5e"
+    },
+    {
+        "time": "2026-02-03 17:01:24",
+        "attack": "port_scan_slow",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "92b17e10c6252570df2e15ec13d60ac8a701f82b481d235f520477e2238940b7"
+    },
+    {
+        "time": "2026-02-03 17:01:26",
+        "attack": "port_scan_slow",
+        "confidence": 75.5,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "779a0bc71dc9f969e80d111bc4928aa464f75074b014ab655c6b2a82250f18e6"
+    },
+    {
+        "time": "2026-02-03 17:01:30",
+        "attack": "brute_force",
+        "confidence": 80,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "ba46d45964fc2c6f6b913f332c576ed9089e1368f52a7e541bfc1b8d0421891b"
+    },
+    {
+        "time": "2026-02-03 17:01:32",
+        "attack": "brute_force",
+        "confidence": 80,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "c2fa92df6068e5ab07a947ad155124d786a951875543a37054ac43dab89f9072"
+    },
+    {
+        "time": "2026-02-03 17:01:36",
+        "attack": "brute_force",
+        "confidence": 80,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "c768627d40ab27c56bfc02a1abced2f6d16b71211d257cb3455cbb1bcf7879af"
+    },
+    {
+        "time": "2026-02-03 17:01:40",
+        "attack": "brute_force",
+        "confidence": 80,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "51b44c42f90a7fc129bcf2c21839f1eb3fb4164f31aeeec79b195321798e2199"
+    },
+    {
+        "time": "2026-02-03 17:01:42",
+        "attack": "brute_force",
+        "confidence": 85.9,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "dc08cdf86bc4f8108b278edca6ceecebf533d831c098ea1e61715c383206b74c"
+    },
+    {
+        "time": "2026-02-03 17:01:46",
+        "attack": "brute_force_ssh",
+        "confidence": 82,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "ae4eebcc6d71b73dd0236ae69994326373af37bc023e75e00857257028096da4"
+    },
+    {
+        "time": "2026-02-03 17:01:50",
+        "attack": "brute_force_ssh",
+        "confidence": 82,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "a22505547c33f79c4748fba76692c64233f7f6e6b9a4644ce78ace70f7e36eb9"
+    },
+    {
+        "time": "2026-02-03 17:01:52",
+        "attack": "brute_force_ssh",
+        "confidence": 90.0,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "357771272485f53249b529a31f93457714a4969ee0a8a4caa6de4c495f985c71"
+    },
+    {
+        "time": "2026-02-03 17:01:56",
+        "attack": "brute_force_ssh",
+        "confidence": 83.1,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "2a3b744b9eaf3b30ad452d989020987a3e2a755f8dd9ff146e54e4de6104c994"
+    },
+    {
+        "time": "2026-02-03 17:02:00",
+        "attack": "brute_force_ssh",
+        "confidence": 82,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "fe4a480d88cf9658314db653349fd93bcaf83e1f0efb3229e7c771c15de65da9"
+    },
+    {
+        "time": "2026-02-03 17:02:04",
+        "attack": "botnet",
+        "confidence": 83.9,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "0118a1120cae1e22acb484d312564230587a4a5e84bcd3299d16a77c36e55a53"
+    },
+    {
+        "time": "2026-02-03 17:02:06",
+        "attack": "botnet",
+        "confidence": 83.0,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "04bbb5cda1444cec0b623c529a72326400d17e84f529a52785cbca64d918d8be"
+    },
+    {
+        "time": "2026-02-03 17:02:10",
+        "attack": "botnet",
+        "confidence": 87.7,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "c7a90155d760780d726f0d59d8f02c395a05a40bc696944db0072f6f340e0ba9"
+    },
+    {
+        "time": "2026-02-03 17:02:12",
+        "attack": "botnet",
+        "confidence": 87.4,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "cea1d1cc499af08faebd8b54f70731e50a32c7e758af4a6c2e525f1cd1d357a3"
+    },
+    {
+        "time": "2026-02-03 17:02:16",
+        "attack": "botnet",
+        "confidence": 86.4,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "996be84bbf87896358a852f8e5f502688be34fdbb246c24e2bf34de5a12e3035"
+    },
+    {
+        "time": "2026-02-03 17:02:18",
+        "attack": "sql_injection",
+        "confidence": 85.6,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "4e73fb28b551479ef3e0e8960954f6ad5baed6996ee76a5a749ba71fa8adcb8e"
+    },
+    {
+        "time": "2026-02-03 17:02:20",
+        "attack": "sql_injection",
+        "confidence": 82.9,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "c7dcac7e6c4e1f6350e354c116b97de7b27e48bc5a17b514270b510e95729b3f"
+    },
+    {
+        "time": "2026-02-03 17:02:22",
+        "attack": "sql_injection",
+        "confidence": 86.0,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "dfb0c2052a038309a9b56f2afe86d5e2247b9947c4a51dfdd9aa4a5af9d86a68"
+    },
+    {
+        "time": "2026-02-03 17:02:26",
+        "attack": "sql_injection",
+        "confidence": 78,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "1a2c4cff89ab254a9f811234d2e6720285e43b2c26b031dfec0a2768e26fef8d"
+    },
+    {
+        "time": "2026-02-03 17:02:30",
+        "attack": "sql_injection",
+        "confidence": 80.8,
+        "severity": "MEDIUM",
+        "explanation": "Database query anomalies detected, typical of SQL injection attacks.",
+        "hash": "161f2f3b9c5948fccb4d68c5c6f9ffc00ccf893d710f6562cfa550840725a488"
+    },
+    {
+        "time": "2026-02-03 17:07:03",
+        "attack": "ddos",
+        "confidence": 91.6,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "8772095afa182147eb81a1290ecdbde4680019288cf15af94b9f67e4378b1ce7"
+    },
+    {
+        "time": "2026-02-03 17:07:05",
+        "attack": "ddos",
+        "confidence": 88.7,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "d08050fe75141f57b093fd25e9717f3e4e02b82832495695956ca2395b881f29"
+    },
+    {
+        "time": "2026-02-03 17:07:09",
+        "attack": "ddos",
+        "confidence": 87.6,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "2ff01f4a48f032fb9ab7620ded4eebebe4e4a5ea5bf365f62b4ef366d69de10a"
+    },
+    {
+        "time": "2026-02-03 17:07:11",
+        "attack": "ddos",
+        "confidence": 85.8,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "e28cfd34dfd18e76f33b79ac037ecbaf1797722e57f601d02a91056b01ddc101"
+    },
+    {
+        "time": "2026-02-03 17:07:15",
+        "attack": "ddos",
+        "confidence": 86.0,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "a06c0a5122bcf913b217216651501eccb8fe70c4c8b4da8232fe678e4758bfcc"
+    },
+    {
+        "time": "2026-02-03 17:07:17",
+        "attack": "ddos_udp",
+        "confidence": 89.8,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "115b8d0adea3029c8602d1e299bd48ee9a784fdaf6c3f90ca21b5b61be0a1456"
+    },
+    {
+        "time": "2026-02-03 17:07:19",
+        "attack": "ddos_udp",
+        "confidence": 91.1,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "4451b95ed3b1336b2569e401c2d8be445c12ae5ed1075f4f92b3e6775e325bff"
+    },
+    {
+        "time": "2026-02-03 17:07:23",
+        "attack": "ddos_udp",
+        "confidence": 89.3,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "5705eb2ca1dd242d202be0ff761ca389664d7ed0a909fcbe0ef1052916fcb025"
+    },
+    {
+        "time": "2026-02-03 17:07:27",
+        "attack": "ddos_udp",
+        "confidence": 90.4,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "763d33da176e7c9313a854188ddb35cc91e4d41c93847455fa5037ff9a454705"
+    },
+    {
+        "time": "2026-02-03 17:07:31",
+        "attack": "ddos_udp",
+        "confidence": 88.9,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "ec75c9d06d1a6a762419391a028c906f0b5ee987a4a7010ce957421703a43f01"
+    },
+    {
+        "time": "2026-02-03 17:07:33",
+        "attack": "ddos_tcp_syn",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "d0be7b7bce151a47dc831c836b2c257fe3a6293f0c2d9d35d3d077c68eb6ba2b"
+    },
+    {
+        "time": "2026-02-03 17:07:37",
+        "attack": "ddos_tcp_syn",
+        "confidence": 74.9,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "6a10b330cbd444fcc6fcde2f5939c105abea5231a83602555f9177358fc87aa0"
+    },
+    {
+        "time": "2026-02-03 17:07:39",
+        "attack": "ddos_tcp_syn",
+        "confidence": 72.9,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "72f4d5565f0ff6219c590d3acff8fe9e2b555e67ad5fb49c3d025cae1714d1ef"
+    },
+    {
+        "time": "2026-02-03 17:07:43",
+        "attack": "ddos_tcp_syn",
+        "confidence": 74.5,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "9db14615611d6e8a06e5c688cb2bd9be52f2b6aa160cdbb3681db7e6a571dc5a"
+    },
+    {
+        "time": "2026-02-03 17:07:47",
+        "attack": "ddos_tcp_syn",
+        "confidence": 72.1,
+        "severity": "MEDIUM",
+        "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack.",
+        "hash": "fb2bd1176b1d97d39cb3d112b9ce322823fe580512493d146f1dffbfdb14b013"
+    },
+    {
+        "time": "2026-02-03 17:07:51",
+        "attack": "port_scan",
+        "confidence": 82.5,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "a2c4e2f712dd079e2ad25397141c79bdd4c084f691d26a66813957f4bf8c32aa"
+    },
+    {
+        "time": "2026-02-03 17:07:53",
+        "attack": "port_scan",
+        "confidence": 80.3,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "1799620efadab48c79a70ad9e40c5cc92862ca4c26ddff9ef7e08da83b82c7aa"
+    },
+    {
+        "time": "2026-02-03 17:07:57",
+        "attack": "port_scan",
+        "confidence": 75,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "a5cfcc4c339b8d1418ef43be0a4137174dcb7accffc997ac5fd9d8cfecf4a574"
+    },
+    {
+        "time": "2026-02-03 17:07:59",
+        "attack": "port_scan",
+        "confidence": 81.2,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "93d13df329e8f95ffce2d1f4b8731d8f21024397aad2ac49067f27be4ab5c817"
+    },
+    {
+        "time": "2026-02-03 17:08:03",
+        "attack": "port_scan",
+        "confidence": 75,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "8784e2ea1ca25b5e59443b24f9ed2154f576b8195aadacb561da71d3af1b34e9"
+    },
+    {
+        "time": "2026-02-03 17:08:05",
+        "attack": "port_scan_slow",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "db0f4782f09ee8ac46d416a321676c37ccef37d21622d733a31c94706494c96f"
+    },
+    {
+        "time": "2026-02-03 17:08:09",
+        "attack": "port_scan_slow",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "5c03dd1058b6595301c4ea55edb59ab301eed8820ff9ecef5719ad9672124118"
+    },
+    {
+        "time": "2026-02-03 17:08:13",
+        "attack": "port_scan_slow",
+        "confidence": 74.2,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "5945d42287af9b9626f75742f1544dbdcd896e0341855f9c5464b6052bc18665"
+    },
+    {
+        "time": "2026-02-03 17:08:15",
+        "attack": "port_scan_slow",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "b94a82abed29ba71a1236d604c2dd3fb68fee00c64e0eb4d121ac969b29ffd70"
+    },
+    {
+        "time": "2026-02-03 17:08:19",
+        "attack": "port_scan_slow",
+        "confidence": 70,
+        "severity": "MEDIUM",
+        "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity.",
+        "hash": "f858d35673ad0d1e9508d48ab84bbcfec6fc189fd701bba66f0b85e8bb40d621"
+    },
+    {
+        "time": "2026-02-03 17:08:21",
+        "attack": "brute_force",
+        "confidence": 83.3,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "0c826212cfe616e8ae8ae8c286d7b7d466edf81525dc8c03ab9c8821a495993e"
+    },
+    {
+        "time": "2026-02-03 17:08:25",
+        "attack": "brute_force",
+        "confidence": 83.6,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "bb89642d97af67b3acc0205b2e3592a62042deda92f455fe4705826ea173a4b0"
+    },
+    {
+        "time": "2026-02-03 17:08:29",
+        "attack": "brute_force",
+        "confidence": 80,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "06638b9fed76c05c062ba45fb73dd7f6cce519d2aab75bb020ff99277ae91747"
+    },
+    {
+        "time": "2026-02-03 17:08:33",
+        "attack": "brute_force",
+        "confidence": 80.2,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "6e5b4d5db0dd6d9bd085fbcf7f379f1ffa2fc33b02ada23cc2a0505d49ca43d7"
+    },
+    {
+        "time": "2026-02-03 17:08:35",
+        "attack": "brute_force",
+        "confidence": 81.2,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "3141233c98ad2ae5cc21a5a06126a3a1700097f6f953854f008fd435a0f29cd9"
+    },
+    {
+        "time": "2026-02-03 17:08:39",
+        "attack": "brute_force_ssh",
+        "confidence": 90.0,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "02148d9d7b4bedae91d558ad81044e27dc100ea6031ed4fa5f937221a2ae18e4"
+    },
+    {
+        "time": "2026-02-03 17:08:43",
+        "attack": "brute_force_ssh",
+        "confidence": 86.5,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "b49c8992e85250df70fe0fe2204c2fdd0aa05a3a43a8a9aecf933462259cb0ae"
+    },
+    {
+        "time": "2026-02-03 17:08:47",
+        "attack": "brute_force_ssh",
+        "confidence": 90.2,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "91f3ecd3c0fd8de7cc4afc0d5076f6f55282e0eef262471e95bd15c8622304ac"
+    },
+    {
+        "time": "2026-02-03 17:08:51",
+        "attack": "brute_force_ssh",
+        "confidence": 82,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "ffd0bb57c7ed689671fa0d664fe5ab9a9e64b451720caeb66cfe0555966aac18"
+    },
+    {
+        "time": "2026-02-03 17:08:53",
+        "attack": "brute_force_ssh",
+        "confidence": 82,
+        "severity": "MEDIUM",
+        "explanation": "Repeated authentication attempts suggest a brute-force login attack.",
+        "hash": "1032265efe13f59984a1b28f127d9bbf7ea7ecfb390442cb8cfe0529edc5b011"
+    },
+    {
+        "time": "2026-02-03 17:08:57",
+        "attack": "botnet",
+        "confidence": 84.5,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "8c1a242d7d9a099c24456391d3da9c548e3f03b4d413f96c09f5c7e7023345bf"
+    },
+    {
+        "time": "2026-02-03 17:08:59",
+        "attack": "botnet",
+        "confidence": 87.1,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "74dbc51818fe63bd335e23030a06000851364f98cba0574cd8e4eb759bfd1ec7"
+    },
+    {
+        "time": "2026-02-03 17:09:03",
+        "attack": "botnet",
+        "confidence": 86.2,
+        "severity": "MEDIUM",
+        "explanation": "Automated request patterns detected, likely from botnet behavior.",
+        "hash": "a94868068c2c9014a466b0c5768ad8062e2137c269782ceb6554df341288099a"
+    }
+]

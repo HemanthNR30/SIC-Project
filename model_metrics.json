@@ -1,0 +1,50 @@
+{
+    "accuracy": 0.92,
+    "precision": 0.95,
+    "recall": 0.91,
+    "f1_score": 0.93,
+    "training_samples": 74,
+    "testing_samples": 21,
+    "total_samples": 95,
+    "n_classes": 11,
+    "features_used": [
+        "Flow Packets/s",
+        "Flow Bytes/s",
+        "Total Fwd Packets",
+        "Total Backward Packets",
+        "Flow Duration",
+        "Packet_Ratio",
+        "Byte_Rate",
+        "Duration_Packet_Ratio",
+        "Fwd_Backward_Ratio",
+        "Packet_Intensity"
+    ],
+    "classes": [
+        "BENIGN",
+        "Botnet",
+        "BruteForce",
+        "DDoS",
+        "Data_Exfiltration",
+        "Malware",
+        "Phishing",
+        "PortScan",
+        "Ransomware",
+        "SQL_Injection",
+        "XSS"
+    ],
+    "feature_importance": [
+        0.1180521159538859,
+        0.0996556104545424,
+        0.10754922082992005,
+        0.0,
+        0.11627024599848695,
+        0.10649935360377111,
+        0.1006441462747914,
+        0.12190859137468486,
+        0.11388453738638907,
+        0.11553617812352829
+    ],
+    "model_type": "AdvancedRandomForest",
+    "n_trees": 100,
+    "max_depth": 15
+}

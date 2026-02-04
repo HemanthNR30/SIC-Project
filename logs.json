@@ -1,0 +1,352 @@
+[
+  {
+    "time": "2026-02-03 17:01:56",
+    "attack": "brute_force_ssh",
+    "confidence": 83.1,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:02:00",
+    "attack": "brute_force_ssh",
+    "confidence": 82.0,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:02:04",
+    "attack": "botnet",
+    "confidence": 83.9,
+    "severity": "MEDIUM",
+    "explanation": "Automated request patterns detected, likely from botnet behavior."
+  },
+  {
+    "time": "2026-02-03 17:02:06",
+    "attack": "botnet",
+    "confidence": 83.0,
+    "severity": "MEDIUM",
+    "explanation": "Automated request patterns detected, likely from botnet behavior."
+  },
+  {
+    "time": "2026-02-03 17:02:10",
+    "attack": "botnet",
+    "confidence": 87.7,
+    "severity": "MEDIUM",
+    "explanation": "Automated request patterns detected, likely from botnet behavior."
+  },
+  {
+    "time": "2026-02-03 17:02:12",
+    "attack": "botnet",
+    "confidence": 87.4,
+    "severity": "MEDIUM",
+    "explanation": "Automated request patterns detected, likely from botnet behavior."
+  },
+  {
+    "time": "2026-02-03 17:02:16",
+    "attack": "botnet",
+    "confidence": 86.4,
+    "severity": "MEDIUM",
+    "explanation": "Automated request patterns detected, likely from botnet behavior."
+  },
+  {
+    "time": "2026-02-03 17:02:18",
+    "attack": "sql_injection",
+    "confidence": 85.6,
+    "severity": "MEDIUM",
+    "explanation": "Database query anomalies detected, typical of SQL injection attacks."
+  },
+  {
+    "time": "2026-02-03 17:02:20",
+    "attack": "sql_injection",
+    "confidence": 82.9,
+    "severity": "MEDIUM",
+    "explanation": "Database query anomalies detected, typical of SQL injection attacks."
+  },
+  {
+    "time": "2026-02-03 17:02:22",
+    "attack": "sql_injection",
+    "confidence": 86.0,
+    "severity": "MEDIUM",
+    "explanation": "Database query anomalies detected, typical of SQL injection attacks."
+  },
+  {
+    "time": "2026-02-03 17:02:26",
+    "attack": "sql_injection",
+    "confidence": 78.0,
+    "severity": "MEDIUM",
+    "explanation": "Database query anomalies detected, typical of SQL injection attacks."
+  },
+  {
+    "time": "2026-02-03 17:02:30",
+    "attack": "sql_injection",
+    "confidence": 80.8,
+    "severity": "MEDIUM",
+    "explanation": "Database query anomalies detected, typical of SQL injection attacks."
+  },
+  {
+    "time": "2026-02-03 17:07:03",
+    "attack": "ddos",
+    "confidence": 91.6,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:05",
+    "attack": "ddos",
+    "confidence": 88.7,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:09",
+    "attack": "ddos",
+    "confidence": 87.6,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:11",
+    "attack": "ddos",
+    "confidence": 85.8,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:15",
+    "attack": "ddos",
+    "confidence": 86.0,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:17",
+    "attack": "ddos_udp",
+    "confidence": 89.8,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:19",
+    "attack": "ddos_udp",
+    "confidence": 91.1,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:23",
+    "attack": "ddos_udp",
+    "confidence": 89.3,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:27",
+    "attack": "ddos_udp",
+    "confidence": 90.4,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:31",
+    "attack": "ddos_udp",
+    "confidence": 88.9,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:33",
+    "attack": "ddos_tcp_syn",
+    "confidence": 70.0,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:37",
+    "attack": "ddos_tcp_syn",
+    "confidence": 74.9,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:39",
+    "attack": "ddos_tcp_syn",
+    "confidence": 72.9,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:43",
+    "attack": "ddos_tcp_syn",
+    "confidence": 74.5,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:47",
+    "attack": "ddos_tcp_syn",
+    "confidence": 72.1,
+    "severity": "MEDIUM",
+    "explanation": "High packet rate and sudden traffic spike indicate a Distributed Denial-of-Service attack."
+  },
+  {
+    "time": "2026-02-03 17:07:51",
+    "attack": "port_scan",
+    "confidence": 82.5,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:07:53",
+    "attack": "port_scan",
+    "confidence": 80.3,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:07:57",
+    "attack": "port_scan",
+    "confidence": 75.0,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:07:59",
+    "attack": "port_scan",
+    "confidence": 81.2,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:08:03",
+    "attack": "port_scan",
+    "confidence": 75.0,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:08:05",
+    "attack": "port_scan_slow",
+    "confidence": 70.0,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:08:09",
+    "attack": "port_scan_slow",
+    "confidence": 70.0,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:08:13",
+    "attack": "port_scan_slow",
+    "confidence": 74.2,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:08:15",
+    "attack": "port_scan_slow",
+    "confidence": 70.0,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:08:19",
+    "attack": "port_scan_slow",
+    "confidence": 70.0,
+    "severity": "MEDIUM",
+    "explanation": "Multiple sequential port requests detected, indicating reconnaissance activity."
+  },
+  {
+    "time": "2026-02-03 17:08:21",
+    "attack": "brute_force",
+    "confidence": 83.3,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:25",
+    "attack": "brute_force",
+    "confidence": 83.6,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:29",
+    "attack": "brute_force",
+    "confidence": 80.0,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:33",
+    "attack": "brute_force",
+    "confidence": 80.2,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:35",
+    "attack": "brute_force",
+    "confidence": 81.2,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:39",
+    "attack": "brute_force_ssh",
+    "confidence": 90.0,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:43",
+    "attack": "brute_force_ssh",
+    "confidence": 86.5,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:47",
+    "attack": "brute_force_ssh",
+    "confidence": 90.2,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:51",
+    "attack": "brute_force_ssh",
+    "confidence": 82.0,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:53",
+    "attack": "brute_force_ssh",
+    "confidence": 82.0,
+    "severity": "MEDIUM",
+    "explanation": "Repeated authentication attempts suggest a brute-force login attack."
+  },
+  {
+    "time": "2026-02-03 17:08:57",
+    "attack": "botnet",
+    "confidence": 84.5,
+    "severity": "MEDIUM",
+    "explanation": "Automated request patterns detected, likely from botnet behavior."
+  },
+  {
+    "time": "2026-02-03 17:08:59",
+    "attack": "botnet",
+    "confidence": 87.1,
+    "severity": "MEDIUM",
+    "explanation": "Automated request patterns detected, likely from botnet behavior."
+  },
+  {
+    "time": "2026-02-03 17:09:03",
+    "attack": "botnet",
+    "confidence": 86.2,
+    "severity": "MEDIUM",
+    "explanation": "Automated request patterns detected, likely from botnet behavior."
+  }
+]
